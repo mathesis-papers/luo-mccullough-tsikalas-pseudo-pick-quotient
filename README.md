@@ -5,13 +5,15 @@
 We answer Question 9.3 of Luo, McCullough and Tsikalas, Beurling Criteria for Reproducing Kernels, arXiv:2607.25088v2 (2026), page 45, negatively on a three-point set: a rank-two source kernel forces constant full interpolation data, while positive retraction quotients extend every proper datum at every matrix size. The source kernel is non-vanishing, the target kernel is strictly positive definite, and their entrywise quotient has quadratic form -10/33 at (-2,1,1). Three points and source rank two are minimal. A diagonal perturbation gives a one-parameter family with the same negative answer. The family is neither complete Pick, Beurling–Lax–Halmos, complete pseudo-Leech, nor weakly Agler-decomposable.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24488320](https://doi.org/10.5281/zenodo.24488320)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24488319](https://doi.org/10.5281/zenodo.24488319)
 - License: CC-BY-4.0
 - Version: 2
 - Mathesis record: [luo-mccullough-tsikalas-pseudo-pick-quotient](https://mathesis-omega-research.apps.chrono-ai.fun/papers/luo-mccullough-tsikalas-pseudo-pick-quotient?version=2)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). A three-point negative answer to Luo–McCullough–Tsikalas's pseudo-Pick quotient question. Mathesis, version 2. https://mathesis-omega-research.apps.chrono-ai.fun/papers/luo-mccullough-tsikalas-pseudo-pick-quotient?version=2
+Haobo Ma, Wenlin Zhang (2026). A three-point negative answer to Luo–McCullough–Tsikalas's pseudo-Pick quotient question. Mathesis, version 2. https://doi.org/10.5281/zenodo.24488320
 
 ## Statement progress
 
