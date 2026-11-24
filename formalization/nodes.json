@@ -1,0 +1,256 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:luo-mccullough-tsikalas-pseudo-pick-quotient:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "8acf7efa41af7fc9ddbbd39571e7ef73462f4509",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S3/HilbertOperators/ReproducingKernels/CompletePseudoPickQuotientRefutation.lean"
+      },
+      "lineage": "collected:luo-mccullough-tsikalas-pseudo-pick-quotient:s1",
+      "macros": {
+        "\\HH": "\\mathcal H",
+        "\\Mult": "\\operatorname{Mult}",
+        "\\diag": "\\operatorname{diag}",
+        "\\psd": "\\succeq0"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "luo-mccullough-tsikalas-pseudo-pick-quotient",
+      "scope": "in_scope",
+      "statement": "The kernels in \\eqref{eq:kernels} form a complete pseudo-Pick pair.\nTheir quotient is not positive semidefinite. No pair on a set with at\nmost two points can have these two properties when its source kernel\nis non-vanishing. Source rank two is minimal among finite-set examples.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A three-point negative answer to Luo–McCullough–Tsikalas's pseudo-Pick quotient question",
+      "toolchain": null,
+      "version": 2,
+      "work": "luo-mccullough-tsikalas-pseudo-pick-quotient"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:luo-mccullough-tsikalas-pseudo-pick-quotient:2:s2",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "8acf7efa41af7fc9ddbbd39571e7ef73462f4509",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S3/HilbertOperators/ReproducingKernels/CompletePseudoPickQuotientRefutation.lean"
+      },
+      "lineage": "collected:luo-mccullough-tsikalas-pseudo-pick-quotient:s2",
+      "macros": {
+        "\\HH": "\\mathcal H",
+        "\\Mult": "\\operatorname{Mult}",
+        "\\diag": "\\operatorname{diag}",
+        "\\psd": "\\succeq0"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "luo-mccullough-tsikalas-pseudo-pick-quotient",
+      "scope": "in_scope",
+      "statement": "Suppose the Pick matrix \\eqref{eq:pick} is positive for the source kernel\nin \\eqref{eq:kernels}. If real coefficients $a_1,\\ldots,a_n$ satisfy\n$\\sum_i a_i=\\sum_i a_i x_{z_i}=0$, then\n\\[\n \\sum_i a_iW_i=0,\\qquad \\sum_i a_i x_{z_i}W_i=0.\n\\]\nConsequently, repeated nodes have equal matrix values, and a datum\ncontaining all three distinct nodes has a single constant matrix value.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A three-point negative answer to Luo–McCullough–Tsikalas's pseudo-Pick quotient question",
+      "toolchain": null,
+      "version": 2,
+      "work": "luo-mccullough-tsikalas-pseudo-pick-quotient"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:luo-mccullough-tsikalas-pseudo-pick-quotient:2:s3",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "8acf7efa41af7fc9ddbbd39571e7ef73462f4509",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S3/HilbertOperators/ReproducingKernels/CompletePseudoPickQuotientRefutation.lean"
+      },
+      "lineage": "collected:luo-mccullough-tsikalas-pseudo-pick-quotient:s3",
+      "macros": {
+        "\\HH": "\\mathcal H",
+        "\\Mult": "\\operatorname{Mult}",
+        "\\diag": "\\operatorname{diag}",
+        "\\psd": "\\succeq0"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "luo-mccullough-tsikalas-pseudo-pick-quotient",
+      "scope": "in_scope",
+      "statement": "Every $R_a$ is positive definite.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A three-point negative answer to Luo–McCullough–Tsikalas's pseudo-Pick quotient question",
+      "toolchain": null,
+      "version": 2,
+      "work": "luo-mccullough-tsikalas-pseudo-pick-quotient"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:luo-mccullough-tsikalas-pseudo-pick-quotient:2:s4",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "8acf7efa41af7fc9ddbbd39571e7ef73462f4509",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S3/HilbertOperators/ReproducingKernels/CompletePseudoPickQuotientRefutation.lean"
+      },
+      "lineage": "collected:luo-mccullough-tsikalas-pseudo-pick-quotient:s4",
+      "macros": {
+        "\\HH": "\\mathcal H",
+        "\\Mult": "\\operatorname{Mult}",
+        "\\diag": "\\operatorname{diag}",
+        "\\psd": "\\succeq0"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "luo-mccullough-tsikalas-pseudo-pick-quotient",
+      "scope": "in_scope",
+      "statement": "Let $(k,\\ell)$ be complete pseudo-Pick on a set with at most two points,\nwith $k$ non-vanishing. Then $\\ell/k$ is positive.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A three-point negative answer to Luo–McCullough–Tsikalas's pseudo-Pick quotient question",
+      "toolchain": null,
+      "version": 2,
+      "work": "luo-mccullough-tsikalas-pseudo-pick-quotient"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:luo-mccullough-tsikalas-pseudo-pick-quotient:2:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "8acf7efa41af7fc9ddbbd39571e7ef73462f4509",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S3/HilbertOperators/ReproducingKernels/CompletePseudoPickQuotientRefutation.lean"
+      },
+      "lineage": "collected:luo-mccullough-tsikalas-pseudo-pick-quotient:s5",
+      "macros": {
+        "\\HH": "\\mathcal H",
+        "\\Mult": "\\operatorname{Mult}",
+        "\\diag": "\\operatorname{diag}",
+        "\\psd": "\\succeq0"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "luo-mccullough-tsikalas-pseudo-pick-quotient",
+      "scope": "in_scope",
+      "statement": "For $0\\leq t<5/99$, define\n\\[\n \\ell_t(i,j)=\\ell(i,j)+t\\delta_{ij}k(i,i).\n\\]\nThen $(k,\\ell_t)$ is complete pseudo-Pick, its target is positive\ndefinite, and its quotient is not positive. Each pair is not BLH,\nnot complete pseudo-Leech, and admits neither a weak nor a strong\nAgler decomposition.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A three-point negative answer to Luo–McCullough–Tsikalas's pseudo-Pick quotient question",
+      "toolchain": null,
+      "version": 2,
+      "work": "luo-mccullough-tsikalas-pseudo-pick-quotient"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:luo-mccullough-tsikalas-pseudo-pick-quotient:2:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "8acf7efa41af7fc9ddbbd39571e7ef73462f4509",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S3/HilbertOperators/ReproducingKernels/CompletePseudoPickQuotientRefutation.lean"
+      },
+      "lineage": "collected:luo-mccullough-tsikalas-pseudo-pick-quotient:s6",
+      "macros": {
+        "\\HH": "\\mathcal H",
+        "\\Mult": "\\operatorname{Mult}",
+        "\\diag": "\\operatorname{diag}",
+        "\\psd": "\\succeq0"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "luo-mccullough-tsikalas-pseudo-pick-quotient",
+      "scope": "in_scope",
+      "statement": "Every pair $(k,\\ell_t)$ in Corollary~\\ref{cor:family} is neither a\ncomplete Pick pair nor a Beurling--Lax--Halmos pair.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A three-point negative answer to Luo–McCullough–Tsikalas's pseudo-Pick quotient question",
+      "toolchain": null,
+      "version": 2,
+      "work": "luo-mccullough-tsikalas-pseudo-pick-quotient"
+    }
+  ]
+}

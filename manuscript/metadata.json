@@ -1,0 +1,15 @@
+{
+  "id": "luo-mccullough-tsikalas-pseudo-pick-quotient",
+  "revision": 2,
+  "problem_ids": ["op-lmt2607q93"],
+  "topic": "Quotient positivity for complete pseudo-Pick pairs of reproducing kernels",
+  "title": "A three-point negative answer to Luo–McCullough–Tsikalas's pseudo-Pick quotient question",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "We answer Question 9.3 of Luo, McCullough and Tsikalas, Beurling Criteria for Reproducing Kernels, arXiv:2607.25088v2 (2026), page 45, negatively on a three-point set: a rank-two source kernel forces constant full interpolation data, while positive retraction quotients extend every proper datum at every matrix size. The source kernel is non-vanishing, the target kernel is strictly positive definite, and their entrywise quotient has quadratic form -10/33 at (-2,1,1). Three points and source rank two are minimal. A diagonal perturbation gives a one-parameter family with the same negative answer. The family is neither complete Pick, Beurling–Lax–Halmos, complete pseudo-Leech, nor weakly Agler-decomposable.",
+  "summary": "On three points, the non-vanishing rank-two source k(i,j)=1+x_i*x_j, x=(1/10,1,2), and targets ell_t(i,j)=1+delta_ij*x_i^2+t*delta_ij*k(i,i), 0<=t<5/99, form complete pseudo-Pick pairs with positive definite targets and indefinite quotients. Their negative quadratic form is -10/33+6t. Written proofs establish the all-size interpolation, minimal cardinality and source rank, and failure of complete Pick, BLH, pseudo-Leech and weak/strong Agler decompositions. The pinned Lean declaration covers the t=0 quotient obstruction and all-size interpolation; the parameter family and other deductions have written proofs. Exact rational identities and a rational interior example are supplied.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S3/HilbertOperators/ReproducingKernels/CompletePseudoPickQuotientRefutation.lean"
+}

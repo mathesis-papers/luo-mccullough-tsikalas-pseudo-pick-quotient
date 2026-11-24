@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 96843,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "2597e1a3539b31b744193ecb7bf20bf23a687fd60d55060b238094095529c25e",
+      "sha256": "2597e1a3539b31b744193ecb7bf20bf23a687fd60d55060b238094095529c25e"
+    },
+    "source": {
+      "bytes": 16645,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "6ebc2f53078d8d043503576fe45b3d940b5bc3a1caa5ce7cc8721715c85838cd",
+      "sha256": "6ebc2f53078d8d043503576fe45b3d940b5bc3a1caa5ce7cc8721715c85838cd"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "We answer Question 9.3 of Luo, McCullough and Tsikalas, Beurling Criteria for Reproducing Kernels, arXiv:2607.25088v2 (2026), page 45, negatively on a three-point set: a rank-two source kernel forces constant full interpolation data, while positive retraction quotients extend every proper datum at every matrix size. The source kernel is non-vanishing, the target kernel is strictly positive definite, and their entrywise quotient has quadratic form -10/33 at (-2,1,1). Three points and source rank two are minimal. A diagonal perturbation gives a one-parameter family with the same negative answer. The family is neither complete Pick, Beurling–Lax–Halmos, complete pseudo-Leech, nor weakly Agler-decomposable.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "8acf7efa41af7fc9ddbbd39571e7ef73462f4509",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S3/HilbertOperators/ReproducingKernels/CompletePseudoPickQuotientRefutation.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 96843,
+      "sha256": "2597e1a3539b31b744193ecb7bf20bf23a687fd60d55060b238094095529c25e",
+      "url": "/api/v1/collected-papers/luo-mccullough-tsikalas-pseudo-pick-quotient/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-24T02:44:37.162183442Z",
+    "record": "luo-mccullough-tsikalas-pseudo-pick-quotient",
+    "repository_name": "luo-mccullough-tsikalas-pseudo-pick-quotient",
+    "source": {
+      "bytes": 16645,
+      "sha256": "6ebc2f53078d8d043503576fe45b3d940b5bc3a1caa5ce7cc8721715c85838cd",
+      "url": "/api/v1/collected-papers/luo-mccullough-tsikalas-pseudo-pick-quotient/files/source?version=2"
+    },
+    "title": "A three-point negative answer to Luo–McCullough–Tsikalas's pseudo-Pick quotient question",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-24T02:44:37.162183442Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "luo-mccullough-tsikalas-pseudo-pick-quotient"
+  }
+}

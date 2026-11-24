@@ -1,0 +1,508 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\psd}{\succeq0}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\Mult}{\operatorname{Mult}}
+\newcommand{\diag}{\operatorname{diag}}
+\title{A three-point negative answer to\newline
+Luo--McCullough--Tsikalas's\newline pseudo-Pick quotient question}
+\author{Haobo Ma\thanks{ChronoAI Pte Ltd, Singapore.}\and
+Wenlin Zhang\thanks{National University of Singapore; ChronoAI Pte Ltd, Singapore.}}
+\date{18 November 2026\\[3pt]\small CC BY 4.0}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We answer Question 9.3 of Luo, McCullough and Tsikalas,
+\emph{Beurling Criteria for Reproducing Kernels}, arXiv:2607.25088v2
+(2026), page 45, negatively on a three-point set: a rank-two source kernel
+forces constant full interpolation data, while positive retraction quotients
+extend every proper datum at every matrix size.
+The source kernel is non-vanishing, the target kernel is strictly positive
+definite, and their entrywise quotient has quadratic form $-10/33$ at
+$(-2,1,1)$. Three points and source rank two are minimal. A diagonal
+perturbation gives a one-parameter family with the same negative answer.
+The family is neither complete Pick, Beurling--Lax--Halmos, complete
+pseudo-Leech, nor weakly Agler-decomposable.
+\end{abstract}
+
+\section{The question and the construction}
+A complete pseudo-Pick pair need not have a positive quotient, even on
+three points. The property in \cite[Definition 9.2]{LMT} concerns interpolation
+on the target space itself. This differs from the complete Pick property
+for a pair, which interpolates multipliers from the source space to the
+target space \cite[Definition 3.25]{LMT}. The familiar one-kernel matrix
+interpolation property is described in \cite[Section 0]{AM}; keeping the
+two multiplier spaces distinct is essential here. For the mixed-space
+property, McCullough and Tsikalas characterize diagonal holomorphic
+pairs by Shimorin factorizations \cite[Theorem 1.4]{MT}.
+The present construction concerns the same-target-space property of
+\cite[Definition 9.2]{LMT} on a finite set, with a singular source kernel.
+The separation from mixed-space complete Pick alone has an earlier
+antecedent: \cite[Proposition 7.4]{MT}, already in its 2024 preprint,
+has a complete Pick target and positive quotient $1+u+4u^2$, where
+$u=z\overline w$. Schur multiplication transfers admissible source
+data to target Pick data, so that example is complete pseudo-Pick.
+Our distinction is the negative quotient, with minimal cardinality
+and source rank, not the existence of a separation by itself.
+
+A scalar kernel $h$ on a set $X$ is positive if every finite matrix
+$[h(z_i,z_j)]$ is positive semidefinite; repetitions among the $z_i$ are
+allowed. Its reproducing kernel Hilbert space is denoted by $\HH_h$.
+For a positive integer $m$, let $M_m(\mathbb C)$ be the $m\times m$
+complex matrices, $I_m$ their identity, and $W^*$ the conjugate transpose
+of $W$. A function $\Phi:X\to M_m(\mathbb C)$ is a contractive
+multiplier on $\HH_h\otimes\mathbb C^m$ precisely when
+\begin{equation}\label{eq:mult}
+  [\,h(i,j)(I_m-\Phi(i)\Phi(j)^*)\,]_{i,j\in X}\psd.
+\end{equation}
+For finite $X$, this is the ordinary block-matrix criterion; in general
+it is a positive-kernel criterion \cite[Section 3, p.~15]{LMT}.
+Indeed, on the span of kernel vectors, the adjoint of multiplication must
+send $h_j\otimes u$ to $h_j\otimes\Phi(j)^*u$.
+The norm inequality for this assignment is exactly \eqref{eq:mult}; it
+also makes the assignment well defined, and its bounded extension gives
+the multiplier.
+
+A pair $(k,\ell)$ is \emph{complete pseudo-Pick} if for all positive
+integers $n,m$, all lists $z_1,\ldots,z_n\in X$ and all
+$W_1,\ldots,W_n\in M_m(\mathbb C)$, positivity of
+\begin{equation}\label{eq:pick}
+  P=[\,k(z_i,z_j)(I_m-W_iW_j^*)\,]_{i,j=1}^n
+\end{equation}
+implies that a contractive multiplier on $\HH_\ell\otimes\mathbb C^m$
+has values $\Phi(z_i)=W_i$. Question 9.3 asks whether this property and
+the non-vanishing of $k$ imply positivity of the entrywise quotient
+$\ell/k$. In particular, the question imposes no strict positive
+definiteness hypothesis on $k$.
+
+Take $X=\{0,1,2\}$, put $x=(1/10,1,2)$, and define
+\begin{equation}\label{eq:kernels}
+ k(i,j)=1+x_i x_j,\qquad
+ \ell(i,j)=1+\delta_{ij}x_i^2,
+\end{equation}
+where $\delta_{ij}=1$ for $i=j$ and $0$ otherwise. Write
+$\mathbf1=(1,1,1)^T$. Their matrices are
+\[
+ K=\mathbf1\mathbf1^*+xx^T
+ =\begin{pmatrix}101/100&11/10&6/5\\11/10&2&3\\6/5&3&5\end{pmatrix},
+ \qquad
+ E=\mathbf1\mathbf1^*+\diag(1/100,1,4).
+\]
+Thus $K\psd$ has rank two, all its entries are positive, and $E$ is
+positive definite.
+
+\begin{theorem}\label{thm:main}
+The kernels in \eqref{eq:kernels} form a complete pseudo-Pick pair.
+Their quotient is not positive semidefinite. No pair on a set with at
+most two points can have these two properties when its source kernel
+is non-vanishing. Source rank two is minimal among finite-set examples.
+\end{theorem}
+
+The quotient and a negative vector are explicit:
+\begin{equation}\label{eq:negative}
+ Q=\left[\frac{\ell(i,j)}{k(i,j)}\right]
+ =\begin{pmatrix}1&10/11&5/6\\10/11&1&1/3\\5/6&1/3&1\end{pmatrix},
+ \qquad
+ (-2,1,1)Q(-2,1,1)^T=-\frac{10}{33}.
+\end{equation}
+It remains to prove interpolation at every matrix size and the
+minimality assertion.
+
+\section{Interpolation for the example}
+\begin{lemma}\label{lem:relations}
+Suppose the Pick matrix \eqref{eq:pick} is positive for the source kernel
+in \eqref{eq:kernels}. If real coefficients $a_1,\ldots,a_n$ satisfy
+$\sum_i a_i=\sum_i a_i x_{z_i}=0$, then
+\[
+ \sum_i a_iW_i=0,\qquad \sum_i a_i x_{z_i}W_i=0.
+\]
+Consequently, repeated nodes have equal matrix values, and a datum
+containing all three distinct nodes has a single constant matrix value.
+\end{lemma}
+\begin{proof}
+Compress $P$ by the block row $[a_1I_m\ \cdots\ a_nI_m]$.
+The two scalar relations cancel its positive terms and give
+\[
+  -AA^*-BB^*\psd,\qquad
+  A=\sum_i a_iW_i,\quad B=\sum_i a_ix_{z_i}W_i.
+\]
+For every vector $u$, this says
+$-\|A^*u\|^2-\|B^*u\|^2\geq0$, so $A=B=0$.
+For equal nodes, coefficients $1,-1$ at the two occurrences and zero
+elsewhere give equality of the matrix values.
+
+If all three nodes occur, select one occurrence of each. Positivity
+passes to this principal block matrix, and the coefficients
+$(-10,19,-9)$ have zero sum and zero coordinate-weighted sum.
+The two resulting relations are
+\[
+ -10W_0+19W_1-9W_2=0,\qquad -W_0+19W_1-18W_2=0.
+\]
+Subtracting gives $W_0=W_2$, and substitution gives $W_1=W_0$.
+The repeated-node conclusion covers the rest of the list.
+\end{proof}
+
+For $a\in X$, define a retraction $r_a:X\to X\setminus\{a\}$ that fixes
+the other two points by the tuples
+\[
+\begin{aligned}
+(r_0(0),r_0(1),r_0(2))&=(1,1,2),\\
+(r_1(0),r_1(1),r_1(2))&=(0,0,2),\\
+(r_2(0),r_2(1),r_2(2))&=(0,1,0).
+\end{aligned}
+\]
+Set $R_a(i,j)=\ell(i,j)/k(r_a(i),r_a(j))$.
+
+\begin{lemma}\label{lem:retract}
+Every $R_a$ is positive definite.
+\end{lemma}
+\begin{proof}
+The factorizations $R_a=L_aD_aL_a^T$ are given in the following table.
+Here $L_a$ is unit lower triangular, with its three entries below the
+diagonal listed in the order $(L_{10},L_{20},L_{21})$, and the final
+column gives the diagonal entries of $D_a$.
+\begin{center}
+\renewcommand{\arraystretch}{1.65}
+\begin{tabular}{c c c}
+\toprule
+$a$ & Entries of $L_a$ & Entries of $D_a$\\
+\midrule
+$0$ & $\left(\frac{100}{101},\frac{200}{303},\frac{1}{153}\right)$
+    & $\left(\frac{101}{200},\frac{51}{101},\frac{358}{459}\right)$\\
+$1$ & $\left(\frac{100}{101},\frac56,\frac{101}{12240}\right)$
+    & $\left(1,\frac{10200}{10201},\frac{4487}{14688}\right)$\\
+$2$ & $\left(\frac{10}{11},\frac{100}{101},\frac{110}{2121}\right)$
+    & $\left(1,\frac{21}{121},\frac{850400}{214221}\right)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Expanding the matrix products verifies each identity. All entries of $D_a$
+are positive and each $L_a$ is invertible.
+\end{proof}
+
+We also use the block Schur product fact: if $[A_{ij}]\psd$ is a block
+matrix and $[s_{ij}]\psd$ is a scalar matrix, then
+$[s_{ij}A_{ij}]\psd$. To see this, factor
+$s_{ij}=\sum_\nu c_{i\nu}\overline{c_{j\nu}}$ and write the result as
+$\sum_\nu C_\nu[A_{ij}]C_\nu^*$, where
+$C_\nu=\diag(c_{i\nu}I_m)$.
+
+\begin{proof}[Proof of interpolation in Theorem~\ref{thm:main}]
+Fix any positive $n,m$ and any positive Pick datum. A diagonal block of
+$P$ shows $I_m-W_iW_i^*\psd$, since $k(z_i,z_i)>0$.
+By Lemma~\ref{lem:relations}, the values at repeated nodes agree.
+If one distinct node occurs, extend its value $U$ constantly to $X$.
+If all three nodes occur, Lemma~\ref{lem:relations} again gives one
+value $U$, and use the same extension. In both cases,
+$[\ell(i,j)(I_m-UU^*)]\psd$ because it is a tensor product of two
+positive matrices.
+
+If exactly two distinct nodes occur, let $a$ be the missing node and
+denote their values by $V_b$ for $b\ne a$. Define
+$\Phi(i)=V_{r_a(i)}$. This agrees with every prescribed value. The
+matrix
+\[
+ A_{ij}=k(r_a(i),r_a(j))
+       (I_m-V_{r_a(i)}V_{r_a(j)}^*)
+\]
+is positive: it is obtained by repeating rows and columns of the positive
+two-node Pick matrix, equivalently by a matrix congruence. Moreover,
+\[
+ \ell(i,j)(I_m-\Phi(i)\Phi(j)^*)=R_a(i,j)A_{ij}.
+\]
+Lemma~\ref{lem:retract} and the block Schur product fact prove positivity
+of the target matrix. Criterion \eqref{eq:mult} gives the required
+contractive multiplier. The cases exhaust all finite lists, including
+lists with repetitions, for every $m$.
+\end{proof}
+
+\section{Minimality and related properties}
+\begin{lemma}\label{lem:two}
+Let $(k,\ell)$ be complete pseudo-Pick on a set with at most two points,
+with $k$ non-vanishing. Then $\ell/k$ is positive.
+\end{lemma}
+The two-point lower bound is also a consequence of the classical
+multiplier-distance inequality \cite[Proposition 4]{ARSW}; the following
+argument gives the quotient determinant directly, including degenerate
+target kernels.
+\begin{proof}
+The empty and one-point cases follow from nonnegative diagonal entries.
+For two points, write $k_{ij}=k(i,j)$ and $\ell_{ij}=\ell(i,j)$.
+Non-vanishing and positivity of $k$ give $k_{00},k_{11}>0$ and
+\[
+  \rho=\frac{|k_{01}|}{\sqrt{k_{00}k_{11}}}\in(0,1].
+\]
+Put $t=\sqrt{(1-\rho)/(1+\rho)}$. The scalar datum $W_0=t$, $W_1=-t$
+has source Pick matrix
+\[
+ \begin{pmatrix}(1-t^2)k_{00}&(1+t^2)k_{01}\\
+ (1+t^2)k_{10}&(1-t^2)k_{11}\end{pmatrix}\psd:
+\]
+its diagonal is nonnegative and its determinant is zero.
+Pseudo-Pick interpolation and \eqref{eq:mult} give
+\[
+ (1-t^2)^2\ell_{00}\ell_{11}
+ \geq (1+t^2)^2|\ell_{01}|^2.
+\]
+Since $(1-t^2)/(1+t^2)=\rho$, this is
+$|\ell_{01}|^2\leq\rho^2\ell_{00}\ell_{11}$, which makes the
+determinant of $[\ell_{ij}/k_{ij}]$ nonnegative. Its diagonal is
+nonnegative as well. This also covers a zero diagonal entry of $\ell$.
+\end{proof}
+Together with \eqref{eq:negative}, this proves the point-minimality
+assertion of Theorem~\ref{thm:main}.
+
+For its rank assertion, a non-vanishing rank-one positive kernel on a
+finite set has the form $k(i,j)=u_i\overline{u_j}$ with every $u_i\ne0$.
+For any positive target matrix $E$ the quotient is
+$D^{-1}E(D^{-1})^*$, where $D=\diag(u_i)$, and is therefore positive.
+Rank zero is excluded by non-vanishing.
+
+A Beurling--Lax--Halmos (BLH) pair requires every
+$\Mult(\HH_k)$-invariant subspace of $\HH_\ell\otimes\mathcal E$
+to be the range of a partially isometric multiplier from some
+$\HH_k\otimes\mathcal F$ \cite[Definition 1.2]{LMT}.
+
+\begin{corollary}\label{cor:family}
+For $0\leq t<5/99$, define
+\[
+ \ell_t(i,j)=\ell(i,j)+t\delta_{ij}k(i,i).
+\]
+Then $(k,\ell_t)$ is complete pseudo-Pick, its target is positive
+definite, and its quotient is not positive. Each pair is not BLH,
+not complete pseudo-Leech, and admits neither a weak nor a strong
+Agler decomposition.
+\end{corollary}
+\begin{proof}
+The target matrix is $E+t\diag(k(0,0),k(1,1),k(2,2))$, hence is
+positive definite. The retraction quotients become
+\[
+ R_{a,t}=R_a+t\diag\left(
+ \frac{k(i,i)}{k(r_a(i),r_a(i))}\right)_{i\in X},
+\]
+which remain positive definite for every $t\geq0$. The proof in
+Section~2, including repeated nodes and all matrix sizes, is unchanged.
+The entrywise quotient is $Q+tI_3$, so
+\[
+ (-2,1,1)(Q+tI_3)(-2,1,1)^T=-\frac{10}{33}+6t<0
+ \qquad (0\leq t<5/99).
+\]
+This interval is sufficient; no optimal endpoint is asserted.
+
+Every $\HH_{\ell_t}$ consists of all functions on $X$ and so is
+$\Mult(\HH_k)$-invariant. If the pair were BLH, applying
+\cite[Proposition 3.1]{LMT} to this entire target space would give a
+positive kernel $g$ with $\ell_t=kg$. Non-vanishing of $k$ would force
+the indefinite quotient $\ell_t/k$ to be positive, a contradiction.
+
+For the pseudo-Leech assertion, recall that complete pseudo-Leech means
+that every positive kernel of the form
+$[k(i,j)(A_iA_j^*-B_iB_j^*)]$ factors as
+$B_i=A_i\Phi(i)$ through a contractive target-space multiplier, for
+arbitrary finite rectangular matrix data
+\cite[Definition 4.1, pp.~23--24]{LMT}.
+The argument of \cite[Proposition 4.3]{LMT}, applied to the entire target
+space, shows directly that this property requires a positive quotient.
+Indeed, on any finite set, the Hermitian matrix $[1/k(i,j)]$ has a
+decomposition $AA^*-BB^*$, by its positive and negative spectral parts;
+pad both factors with zero columns to the same width $d$.
+Its rows $A_i,B_i\in\mathbb C^{1\times d}$ give the positive input
+$[k(i,j)(A_iA_j^*-B_iB_j^*)]=\mathbf1\mathbf1^*$.
+A pseudo-Leech interpolant would imply positivity of
+$[\ell_t(i,j)(I_d-\Phi(i)\Phi(j)^*)]$.
+Compressing this block matrix by the block-diagonal row map with rows
+$A_i$ gives precisely $[\ell_t(i,j)/k(i,j)]$, a contradiction.
+This deduction uses no invariant-subspace comparison hypothesis.
+
+Finally, a weak Agler decomposition is a pointwise limit
+\[
+ Q_n(i)(I-\Phi_n(i)\Phi_n(j)^*)Q_n(j)^*
+       \longrightarrow 1/k(i,j),
+\]
+where $\Phi_n$ are contractive target-space multipliers and $Q_n(i)$
+are finite row vectors \cite[Definition 3.13]{LMT}.
+Multiplication by $\ell_t(i,j)$ makes every approximant positive,
+by the same block compression. Its limit would be $\ell_t/k$,
+which is not positive. This is the necessary condition already noted
+in \cite[Remark 3.14]{LMT}. A strong Agler decomposition would give
+the same positivity directly \cite[Definition 3.17]{LMT}.
+\end{proof}
+
+\begin{corollary}\label{cor:separation}
+Every pair $(k,\ell_t)$ in Corollary~\ref{cor:family} is neither a
+complete Pick pair nor a Beurling--Lax--Halmos pair.
+\end{corollary}
+\begin{proof}
+Shimorin's necessary factorization theorem for mixed complete Pick pairs
+\cite[Theorem 1.4]{Shimorin}, also restated as
+\cite[Theorem 1.9]{MT}, already implies that every pair in the family
+fails complete Pick, because such a pair would have a positive quotient.
+The following scalar datum gives an explicit obstruction as well.
+For the complete Pick property for a pair, the input matrix is
+$[\ell(z_i,z_j)I_m-k(z_i,z_j)W_iW_j^*]$, and the interpolant is a
+contractive multiplier from $\HH_k\otimes\mathbb C^m$ to
+$\HH_\ell\otimes\mathbb C^m$ \cite[Definition 3.25]{LMT}.
+The single scalar datum $\Phi(0)=1$ is admissible because
+$\ell(0,0)=k(0,0)$. If such a mixed-space multiplier existed, its
+positive kernel
+$B_{ij}=\ell(i,j)-k(i,j)\Phi(i)\overline{\Phi(j)}$ would satisfy
+$B_{00}=0$. Every positive matrix with a zero diagonal entry has zero
+in the corresponding row: apply its $2\times2$ principal minors.
+It follows that
+$\Phi=(1,10/11,5/6)$. But then
+\[
+ [B_{ij}]_{i,j=1,2}=
+ \begin{pmatrix}42/121&-14/11\\-14/11&55/36\end{pmatrix},
+ \qquad \det[B_{ij}]_{i,j=1,2}=-\frac{791}{726}<0,
+\]
+a contradiction for $t=0$.
+
+For general $t$ in the indicated interval, put $s=1+t$,
+$a=10/11$ and $b=5/6$. The admissible single datum
+$\Phi(0)=\sqrt{s}$ forces
+$\Phi=(\sqrt{s},a/\sqrt{s},b/\sqrt{s})$ by the same zero-row argument.
+The determinant of the remaining $2\times2$ block is $F(s)/s^2$, where
+\[
+ F(s)=10(s^2-a^2)(s^2-b^2)-(s-3ab)^2.
+\]
+Set $C=10(a^2+b^2)+1=35303/2178<20$.
+For $s\geq1$, $F'(s)=40s^3-2Cs+6ab>0$.
+Since $s<104/99$ and
+$F(104/99)=-34591631/96059601<0$, the required determinant is negative.
+
+The BLH assertion for every $t$ is part of Corollary~\ref{cor:family}.
+\end{proof}
+
+The discussion preceding Problem 9.4 in \cite[p.~45]{LMT} already
+separates pseudo-Pick from complete Pick in a diagonal holomorphic
+setting. Corollary~\ref{cor:separation} supplies a finite-set
+separation. The paragraph preceding Question 9.3 considers a route from
+pseudo-Pick to BLH; it does not assert that implication as a theorem.
+Corollary~\ref{cor:family} proves its failure on general sets. The
+converse of the stated pseudo-Leech implication also fails. These are
+obstructions, not refutations of assertions made in the source.
+
+The source multiplier algebra in this example consists of constants.
+Indeed, $\HH_k=\operatorname{span}\{\mathbf1,x\}$ as a vector space.
+If $\varphi$ is a multiplier, $\varphi=a+bx$ and
+$\varphi x=c+dx$ for scalars $a,b,c,d$. Thus
+$bx_i^2+(a-d)x_i-c=0$ at three distinct values $x_i$, so the polynomial
+vanishes identically and $b=c=0$, $a=d$. This also explains why the
+example does not belong to the domain-based regular setting of the
+source's Questions 9.1, 9.5 and 9.6. In particular, failure of BLH here
+does not answer the BLH-constrained existence question 9.5.
+The construction makes no assertion about strictly positive definite
+source kernels or holomorphic-domain variants.
+For the following comparison, normalization at $o$ means $h(z,o)=1$
+for all $z$, for each of the two kernels; irreducibility means
+non-vanishing and linear independence of distinct kernel vectors.
+Hartz's multiplier-inclusion criterion \cite[Corollary 3.5]{Hartz}
+gives an affirmative subclass: if $k$ is an irreducible complete
+Pick kernel and $k,\ell$ are normalized at the same point, complete
+pseudo-Pick implies $\ell/k\psd$. Indeed, test every finite restriction
+of a matrix-valued contractive source multiplier; pseudo-Pick gives
+positivity of its target multiplier kernel on each finite set. This
+is completely contractive multiplier inclusion, to which Hartz's
+criterion applies.
+
+\begin{center}
+\small
+\begin{tabular}{p{.26\textwidth}p{.65\textwidth}}
+\toprule
+Source item in \cite{LMT} & Coverage\\
+\midrule
+Question 9.3, p.~45 & Answered: no. Three points and source rank two
+are minimal; Corollary~\ref{cor:family} gives a family.\\
+Pseudo-Pick $\Rightarrow$ BLH discussion, p.~45 & Not asserted as a
+theorem in the source; fails for \eqref{eq:kernels}.\\
+Problem 9.4, p.~45 & Finite pseudo-Pick/non-complete-Pick separation;
+earlier separation: McCullough--Tsikalas, Proposition 7.4 (2024);
+the posing source also gives a holomorphic separation. Full comparison
+not covered.\\
+Pseudo-Leech implication, pp.~24, 45 & The forward implication is stated
+in the source; its converse is not asserted there and fails
+for \eqref{eq:kernels}.\\
+Agler decompositions, Definitions 3.13, 3.17 & The family admits neither;
+the quotient obstruction is credited to Remark 3.14.\\
+Question 9.1, pp.~44--45 & Not covered: domain and dilation hypotheses.\\
+Question 9.5, p.~45 & Not covered: a regular BLH pair is required.\\
+Question 9.6, p.~45 & Not covered: polynomial row versus matrix norms.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Verification scope and supporting material}
+The Lean declaration \texttt{result} in the
+\href{https://github.com/the-omega-institute/trureturing/blob/8acf7efa41af7fc9ddbbd39571e7ef73462f4509/D5/S3/HilbertOperators/ReproducingKernels/CompletePseudoPickQuotientRefutation.lean}{pinned Lean file}
+proves the negation of \texttt{claim}, the universal quotient-positivity
+assertion for non-vanishing positive complex kernels with the complete
+pseudo-Pick property. Its proof uses the three-point kernels above and
+covers arbitrary positive matrix sizes and repeated interpolation
+nodes. Lemma~\ref{lem:two} and Corollary~\ref{cor:separation} are written
+proofs, as are the rank-one obstruction, the constant-multiplier
+description and all assertions of Corollary~\ref{cor:family}.
+In particular the pinned declaration concerns $t=0$, not the whole
+parameter family. The supporting \texttt{verify.py} and \texttt{checks.json}
+give exact rational checks of \eqref{eq:negative}, the three retraction
+factorizations, the source relations and the mixed-multiplier obstruction.
+They also give the coefficient $6$ and endpoint $5/99$ in the family's
+negative quadratic form, a rational interior example, and its positive
+retraction factorizations. These are exact identities; the interval and
+all-size conclusions have the written proofs above.
+
+\begin{thebibliography}{9}
+\bibitem{AM}
+J.~Agler and J.~E.~McCarthy,
+\emph{Complete Nevanlinna--Pick kernels},
+Journal of Functional Analysis \textbf{175} (2000), 111--124.
+DOI: \href{https://doi.org/10.1006/jfan.2000.3599}{10.1006/jfan.2000.3599}.
+Author manuscript, Section~0:
+\url{https://arxiv.org/abs/1610.01997v1}.
+
+\bibitem{LMT}
+S.~Luo, S.~McCullough and G.~Tsikalas,
+\emph{Beurling Criteria for Reproducing Kernels},
+arXiv:2607.25088v2 (14 August 2026).
+\url{https://arxiv.org/abs/2607.25088v2}.
+
+\bibitem{MT}
+S.~McCullough and G.~Tsikalas,
+\emph{The Complete Pick Property for Pairs of Kernels and Shimorin's
+Factorization}, Journal of the London Mathematical Society
+\textbf{112} (2025), no.~4, e70325.
+DOI: \href{https://doi.org/10.1112/jlms.70325}{10.1112/jlms.70325}.
+Author manuscript, Theorem~1.4 and Proposition~7.4:
+\url{https://arxiv.org/abs/2405.16319v4}.
+First preprint: \url{https://arxiv.org/abs/2405.16319v1} (25 May 2024).
+
+\bibitem{ARSW}
+N.~Arcozzi, R.~Rochberg, E.~T.~Sawyer and B.~D.~Wick,
+\emph{Distance Functions for Reproducing Kernel Hilbert Spaces},
+Contemporary Mathematics \textbf{547} (2011), 25--53.
+DOI: \href{https://doi.org/10.1090/conm/547/10805}{10.1090/conm/547/10805}.
+Author manuscript, Proposition~4, p.~5:
+\url{https://arxiv.org/abs/1010.0136v1}.
+
+\bibitem{Shimorin}
+S.~Shimorin,
+\emph{Commutant lifting and factorization of reproducing kernels},
+Journal of Functional Analysis \textbf{224} (2005), 134--159.
+DOI: \href{https://doi.org/10.1016/j.jfa.2004.08.011}{10.1016/j.jfa.2004.08.011}.
+
+\bibitem{Hartz}
+M.~Hartz,
+\emph{On the isomorphism problem for multiplier algebras of
+Nevanlinna--Pick spaces}, Canadian Journal of Mathematics
+\textbf{69} (2017), 54--106.
+DOI: \href{https://doi.org/10.4153/CJM-2015-050-6}{10.4153/CJM-2015-050-6}.
+Author manuscript, Corollary~3.5:
+\url{https://arxiv.org/abs/1505.05108v1}.
+\end{thebibliography}
+\end{document}
